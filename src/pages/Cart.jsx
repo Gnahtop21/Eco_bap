@@ -8,21 +8,18 @@ function Cart() {
     const { cartItems, removeFromCart, updateQuantity } = useCart();
     const [showPaymentModal, setShowPaymentModal] = useState(false);
 
-    const total = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-    const totalPrice = cartItems.reduce((sum, item) => {
-        return sum + (parseFloat(item.price) * item.quantity)
-    }, 0);
+    const totalPrice = cartItems.reduce((sum, item) => sum + (parseFloat(item.price) * item.quantity), 0);
 
     return (
         <div className="cart-container">
-            <h1>Giỏ hàng của bạn ({total} sản phẩm)</h1>
-            
+            <h1>Giỏ hàng của bạn ({cartItems.length} sản phẩm)</h1>
+
             {cartItems.length === 0 ? (
                 <div className="empty-cart">
                     <img src={cart} alt="Giỏ hàng trống" />
                     <p>Giỏ hàng của bạn đang trống</p>
-                    <button 
-                        className="continue-shopping" 
+                    <button
+                        className="continue-shopping"
                         onClick={() => window.location.href = '/shop'}
                     >
                         Tiếp tục mua sắm
@@ -41,31 +38,37 @@ function Cart() {
                                         {item.price.toLocaleString('vi-VN')} VNĐ
                                     </p>
                                     <div className="quantity-controls">
-                                        <button 
+                                        <button
                                             onClick={() => updateQuantity(item.id, item.quantity - 1)}
                                             disabled={item.quantity <= 1}
                                         >-</button>
                                         <span>{item.quantity}</span>
                                         <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
                                     </div>
-                                    <button 
+                                    <button
                                         className="remove-btn"
                                         onClick={() => removeFromCart(item.id)}
                                     >
-                                        Xóa
+                                        🗑️
                                     </button>
                                 </div>
                             </div>
                         ))}
                     </div>
                     <div className="cart-summary">
-                        <h3>Tổng tiền: {totalPrice.toLocaleString('vi-VN')} VNĐ</h3>
-                        <button 
+                        <h3>Tóm tắt đơn hàng</h3>
+                        <p> Đơn Giá: {totalPrice.toLocaleString('vi-VN')} VNĐ</p>
+                        <p>Vận chuyển: Miễn phí</p>
+                        <p>Thuế: Tính khi thanh toán</p>
+                        <hr />
+                        <p><strong>Tổng tiền: {totalPrice.toLocaleString('vi-VN')} VNĐ</strong></p>
+                        <button
                             className="checkout-btn"
                             onClick={() => setShowPaymentModal(true)}
                         >
-                            Thanh toán
+                            <span className="checkout-icon">$</span> Thanh toán
                         </button>
+                        <a href="/shop" className="continue-shopping-link">← Tiếp tục mua sắm</a>
                     </div>
                 </>
             )}
@@ -73,7 +76,7 @@ function Cart() {
             {showPaymentModal && (
                 <div className="payment-modal-overlay">
                     <div className="payment-modal">
-                        <button 
+                        <button
                             className="close-modal"
                             onClick={() => setShowPaymentModal(false)}
                         >
@@ -85,9 +88,9 @@ function Cart() {
                             {totalPrice.toLocaleString('vi-VN')} VNĐ
                         </p>
                         <div className="qr-container">
-                            <img 
+                            <img
                                 src={QRcode}
-                                alt="QR Code thanh toán" 
+                                alt="QR Code thanh toán"
                                 className="qr-code"
                             />
                         </div>

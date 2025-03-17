@@ -12,7 +12,7 @@ function Footer() {
                 </div>
                 <div className="footer-section">
                     <h3 style={{ textAlign: 'center' }}>Liên Hệ</h3>
-                    <p style={{ textAlign: 'justify' }}>Email: Ecowarriors0509@gmail.com</p>
+                    <p style={{ textAlign: 'justify' }}>Email: Ecobap954@gmail.com</p>
                     <p style={{ textAlign: 'justify' }}>Điện thoại: (84+) 964.179.329  </p>
                     <p style={{ textAlign: 'justify' }}>Địa chỉ: Đại học FPT tại TP. Cần Thơ.</p>
                 </div>
@@ -25,10 +25,10 @@ function Footer() {
                 <div className="footer-section" style={{ marginBottom: '20px' }}>
                     <h3>Theo Dõi</h3>
                     <div className="social-links" style={{ marginTop: '15px' }}>
-                        <a href="https://www.facebook.com/profile.php?id=61568821003334" 
-                           target="_blank" 
-                           rel="noopener noreferrer"
-                           style={{ margin: '0 10px' }}>
+                        <a href="https://www.facebook.com/profile.php?id=61568821003334"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ margin: '0 10px' }}>
                             <FaFacebook className="social-icon" />
                         </a>
                         <a href="#" style={{ margin: '0 10px' }}>
