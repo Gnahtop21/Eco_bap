@@ -45,9 +45,11 @@ export const CartProvider = ({ children }) => {
                     ...updatedItems[existingItemIndex],
                     quantity: updatedItems[existingItemIndex].quantity + 1
                 };
+                toast.success('Đã thêm sản phẩm vào giỏ hàng');
                 return updatedItems;
             } else {
                 // Product doesn't exist, add new item
+                toast.success('Đã thêm sản phẩm vào giỏ hàng');
                 return [...prevItems, { ...product, quantity: 1 }];
             }
         });

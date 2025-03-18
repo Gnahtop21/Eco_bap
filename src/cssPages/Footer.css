@@ -1,86 +1,293 @@
+/* Footer.css */
 .footer {
-    background-color: #333333;
-    color: white;
-    padding: 60px 0;
-    margin-top: 50px;
+    background-color: #318034; /* Màu xanh lá mới */
+    color: #e8f5e9;
+    padding: 50px 20px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
 }
 
 .footer-content {
-    max-width: 95%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+/* Đảm bảo các phần có chiều cao bằng nhau */
+.footer-section {
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
     display: flex;
+    flex-direction: column;
+    margin-bottom: 0; /* Loại bỏ margin-bottom để đảm bảo khoảng cách đồng đều */
+}
+
+.footer h2 {
+    color: #ffffff; /* Màu trắng để tạo tương phản */
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    flex-shrink: 0; /* Ngăn tiêu đề co lại */
+}
+
+.footer h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #E8F5E9; /* Màu đường gạch chân */
+}
+
+.about-section p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+    flex-grow: 1; /* Cho phép nội dung mở rộng để lấp đầy không gian */
+}
+
+.footer-logo {
+    margin-top: auto; /* Đẩy logo xuống cuối phần */
+    padding-top: 15px;
+}
+
+/* Contact Section */
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
-.footer-section {
-    flex: 1;
-    margin: 0 20px;
-    text-align: left;
+.contact-info li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.contact-icon, .hours-icon {
+    margin-right: 10px;
+    color: #E8F5E9;
+    min-width: 20px;
+    flex-shrink: 0;
+}
+
+.contact-info a {
+    color: #e8f5e9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Operation Hours */
+.operation-hours {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+.operation-hours li {
+    display: flex;
     align-items: center;
+    margin-bottom: 12px;
 }
 
-.footer-section h3 {
-    color: #fff;
-    margin-bottom: 50px;
-    font-size: 32px;
+/* Quick Links */
+.quick-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.footer-section p {
-    color: #ccc;
-    line-height: 1.6;
-    font-size: 20px;
-    margin-bottom: 10px;
+.quick-links li {
+    margin-bottom: 12px;
 }
 
+.quick-links a {
+    color: #e8f5e9;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 5px 0;
+}
+
+.quick-links a:hover {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+/* Social Links */
 .social-links {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
 }
 
 .social-links a {
-    color: #ccc;
+    display: flex;
+    align-items: center;
+    color: #e8f5e9;
     text-decoration: none;
-    margin: 5px 0;
-    transition: color 0.3s ease;
-    font-size: 16px;
-    margin-right: 15px;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
 }
 
+.social-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
 
+.social-links a:hover {
+    color: #ffffff;
+}
+
+.social-links a:hover .social-icon {
+    transform: scale(1.2);
+}
+
+.social-name {
+    font-size: 0.9rem;
+}
+
+/* Footer Bottom */
 .footer-bottom {
-    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
     margin-top: 30px;
-    padding-top: 50px;
-    border-top: 1px solid #555;
-    font-size: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    font-size: 0.9rem;
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.legal-links a {
+    color: #e8f5e9;
+    text-decoration: none;
+}
+
+.legal-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Footer Badges */
+.footer-badges {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+}
+
+/* Cập nhật phần phương thức thanh toán */
+.payment-methods, .certifications {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.payment-methods span, .certifications span {
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+/* Thêm phần hiển thị logo ngân hàng */
+.payment-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.payment-logos img {
+    background-color: white;
+    border-radius: 5px;
+    padding: 3px;
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.payment-logos img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
     .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-bottom, .footer-badges {
         flex-direction: column;
+        gap: 15px;
         text-align: center;
     }
-
-    .footer-section {
-        margin: 20px 0;
+    
+    .legal-links {
+        justify-content: center;
+    }
+    
+    .payment-methods, .certifications {
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .payment-logos {
+        justify-content: center;
     }
 }
 
-.social-icon {
-    margin-left: 10px;
-    font-size: 50px;
-    margin: 0 10px;
-    margin-top: 10px;
-    color: #ffffff;
-    transition: color 0.3s ease;
-}
-
-.social-icon:hover {
-    color: #fffcfc;
-}
-
-.social-links a {
-    text-decoration: none;
+@media (max-width: 576px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-section {
+        padding: 15px;
+    }
 }

@@ -38,7 +38,7 @@ export const products = [
   {
     id: 1,
     image: require("./img/img1.jpg"),
-    name: "Túi Xách Eco Elegance",
+    name: "Túi Xách Quai Da",
     description:
       "Túi xách thời trang làm từ vỏ bắp tự nhiên, thân thiện với môi trường",
     price: 220000,

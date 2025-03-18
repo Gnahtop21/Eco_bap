@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { useCart } from '../context/CartContext';
+import { useCart } from '../contexts/CartContext';
 import '../cssPages/Cart.css';
 import cart from '../img/cart.jpg';
 import QRcode from '../img/QRcode.jpg';
-
 function Cart() {
     const { cartItems, removeFromCart, updateQuantity } = useCart();
     const [showPaymentModal, setShowPaymentModal] = useState(false);

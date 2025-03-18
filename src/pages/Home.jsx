@@ -16,7 +16,7 @@ import ecoka from "../img/ecoka.jpg";
 import members from "../img/members.jpg";
 
 import "../cssPages/Home.css";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../contexts/CartContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -37,10 +37,10 @@ function CustomCarousel() {
     >
       <Carousel.Item>
         <div className="carousel-image-container">
-          <img src={img1} alt="First slide" />
+          <img src={img4} alt="First slide" />
           <div className="carousel-overlay">
-            <h2>Discover Innovation</h2>
-            <p>Explore our cutting-edge solutions and services</p>
+            <h2>Khám phá sự đổi mới</h2>
+            <p>Khám phá các sản phẩm thủ công  tuyệt vời của chúng tôi</p>
             <button className="carousel-btn" onClick={scrollToProducts}>
               Xem thêm
             </button>
@@ -52,8 +52,8 @@ function CustomCarousel() {
         <div className="carousel-image-container">
           <img src={img9} alt="Second slide" />
           <div className="carousel-overlay">
-            <h2>Expert Team</h2>
-            <p>Work with our professional and dedicated team</p>
+            <h2>Đội ngũ chuyên gia</h2>
+            <p>Làm việc với đội ngũ chuyên nghiệp và tận tâm của chúng tôi</p>
             <button
               className="carousel-btn"
               onClick={() => (window.location.href = "/shop")}
@@ -66,10 +66,10 @@ function CustomCarousel() {
 
       <Carousel.Item>
         <div className="carousel-image-container">
-          <img src={img4} alt="Third slide" />
+          <img src={img1} alt="Third slide" />
           <div className="carousel-overlay">
-            <h2>Quality Service</h2>
-            <p>Committed to delivering excellence</p>
+            <h2>Sản phẩm chất lượng</h2>
+            <p>Cam kết những sản phẩm làm hài lòng khách hàng</p>
             <button
               className="carousel-btn"
               onClick={() => (window.location.href = "/contact")}
@@ -150,22 +150,6 @@ function Home() {
       <ToastContainer />
       <CustomCarousel />
 
-      <div className="home-hero">
-        <div className="hero-image">
-          <img src={members} alt="Hero" />
-        </div>
-        <div className="hero-content">
-          <h1>Chào Mừng Đến Với Đại Gia Đình Bắp</h1>
-          <p>Cùng khám phá những sản phẩm tuyệt vời nào ^^</p>
-          <button
-            className="hero-btn"
-            onClick={() => (window.location.href = "/shop")}
-          >
-            Shopping Now
-          </button>
-        </div>
-      </div>
-
       <div className="tag-list">
         <div className="inner">
           <div className="tag"> Chào </div>
@@ -188,6 +172,22 @@ function Home() {
         </div>
         <div className="fade"> </div>
       </div>
+      <div className="home-hero">
+        <div className="hero-image">
+          <img src={members} alt="Hero" />
+        </div>
+        <div className="hero-content">
+          <h1>Chào Mừng Đến Với Đại Gia Đình Bắp</h1>
+          <p>Cùng khám phá những sản phẩm tuyệt vời nào ^^</p>
+          <button
+            className="hero-btn"
+            onClick={() => (window.location.href = "/shop")}
+          >
+            Shopping Now
+          </button>
+        </div>
+      </div>
+
 
 
 
