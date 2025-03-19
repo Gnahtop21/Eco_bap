@@ -22,7 +22,6 @@ function Shop() {
     const [searchInput, setSearchInput] = useState('');
 
     useEffect(() => {
-        // Simulate loading
         setTimeout(() => {
             setIsLoading(false);
         }, 800);
@@ -40,32 +39,28 @@ function Shop() {
             results.sort((a, b) => b.id - a.id);
         } else if (sortOption === 'oldToNew') {
             results.sort((a, b) => a.id - b.id);
+        } else if (sortOption === 'alphabetical') {
+            results.sort((a, b) => a.name.localeCompare(b.name));
         }
 
         setFilteredProducts(results);
     }, [searchTerm, sortOption]);
 
-    // Hàm xử lý search khi nhấn nút
     const handleSearch = () => {
         setSearchTerm(searchInput);
     };
 
-    // Hàm xử lý search khi nhấn Enter
     const handleKeyPress = (e) => {
         if (e.key === 'Enter') {
             handleSearch();
         }
     };
 
-    // Hàm xử lý animation bay vào giỏ hàng
     const handleAddToCartWithAnimation = (product) => {
-        // Lấy vị trí của hình ảnh sản phẩm trong card
         const productRef = productRefs.current[product.id];
         if (!productRef) return;
 
         const productImgRect = productRef.getBoundingClientRect();
-
-        // Lấy vị trí của icon giỏ hàng trên header
         const cartIconElement = document.querySelector('.cart-icon') ||
             document.querySelector('.fa-shopping-cart') ||
             document.querySelector('.fa-cart-shopping');
@@ -79,9 +74,8 @@ function Shop() {
 
         const cartIconRect = cartIconElement.getBoundingClientRect();
 
-        // Tạo item bay vào giỏ hàng
         setFlyingItem({
-            id: Date.now(), // Unique ID for animation key
+            id: Date.now(),
             product,
             startX: productImgRect.left + (productImgRect.width / 2),
             startY: productImgRect.top + (productImgRect.height / 2),
@@ -91,7 +85,6 @@ function Shop() {
             height: 60
         });
 
-        // Sau khi animation kết thúc, thêm vào giỏ và hiển thị thông báo
         setTimeout(() => {
             addToCart(product);
             setFlyingItem(null);
@@ -104,14 +97,13 @@ function Shop() {
                 draggable: true,
             });
 
-            // Thêm hiệu ứng pulse cho icon giỏ hàng
             if (cartIconElement) {
                 cartIconElement.classList.add('pulse');
                 setTimeout(() => {
                     cartIconElement.classList.remove('pulse');
                 }, 500);
             }
-        }, 1000); // Đợi 1s cho animation hoàn tất
+        }, 1000);
     };
 
     const handleBuyNow = (product) => {
@@ -119,7 +111,6 @@ function Shop() {
         setShowPaymentModal(true);
     };
 
-    // Dữ liệu quảng cáo
     const advertisements = [
         { id: 1, title: "Ra mắt sản phẩm mới", image: "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/476632530_122120490788627366_6539008516206799441_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=NnfxrPdE3goQ7kNvgFfF2wE&_nc_oc=AdgPSgKXQwmYgjMy_RfEL8QyNEIo8vWtpw92U9cnEOOjE8B22Gq4lWMNlrGgoJCLKRYyNHf1IVsP5DKeLKQQ6ijK&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=tu2H-bbJJWrO1h6ooirz-Q&oh=00_AYGFQ6t5SglHAJZlQnW-6dY-GH1q8-oLRcU85Uu1WoAI4g&oe=67DE3378", link: "#" },
         { id: 2, title: "Sản phẩm mới sale", image: "https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/481901943_122124142598627366_3456504968128262020_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2ckhxszT4a8Q7kNvgFGu0ut&_nc_oc=AdjGboTaKeXhoi2SwvOlzgpPLeXGLqhKsTl6K0wQY2iv_JhVOoUFEBc75CLV8_xrQlAKsme6qTaCG-_eNTE20ucE&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=OuYpoiMKvtHpdkNvVAn5cA&oh=00_AYEnu9un8GSZc-WViUMBag6fwYCkPBX1IULdQLCr5jWQtQ&oe=67DE1EA3", link: "#" },
@@ -141,7 +132,6 @@ function Shop() {
                 pauseOnHover
             />
 
-            {/* Hiệu ứng bay vào giỏ hàng */}
             {flyingItem && (
                 <div
                     key={flyingItem.id}
@@ -169,7 +159,6 @@ function Shop() {
                 </div>
             )}
 
-            {/* Thanh tìm kiếm và lọc */}
             <div className="search-filter-area">
                 <div className="search-sort-container">
                     <div className="search-box">
@@ -202,14 +191,13 @@ function Shop() {
                             <option value="priceHighToLow">Giá: Giảm Dần</option>
                             <option value="newToOld">Sản phẩm mới nhất</option>
                             <option value="oldToNew">Sản phẩm cũ nhất</option>
+                            <option value="alphabetical">Tên: A-Z</option>
                         </select>
                     </div>
                 </div>
             </div>
 
-            {/* Layout chính */}
             <div className="main-shop-layout">
-                {/* Quảng cáo bên trái */}
                 <div className="ad-sidebar left-sidebar">
                     {advertisements.slice(0, 2).map(ad => (
                         <div className="ad-item" key={`left-${ad.id}`}>
@@ -221,7 +209,6 @@ function Shop() {
                     ))}
                 </div>
 
-                {/* Khu vực sản phẩm */}
                 <div className="products-container">
                     {isLoading ? (
                         <div className="loading-container">
@@ -282,7 +269,6 @@ function Shop() {
                     )}
                 </div>
 
-                {/* Quảng cáo bên phải */}
                 <div className="ad-sidebar right-sidebar">
                     {advertisements.slice(2, 4).map(ad => (
                         <div className="ad-item" key={`right-${ad.id}`}>
@@ -295,7 +281,6 @@ function Shop() {
                 </div>
             </div>
 
-            {/* Modal thanh toán */}
             {showPaymentModal && selectedProduct && (
                 <div className="payment-modal-overlay" onClick={() => setShowPaymentModal(false)}>
                     <div className="payment-modal" onClick={(e) => e.stopPropagation()}>

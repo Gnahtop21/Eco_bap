@@ -12,18 +12,18 @@
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px 20px;
+    padding: 20px 30px; /* Tăng padding để tạo không gian rộng hơn */
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo-container {
-    flex: 0 0 120px;
+    flex: 0 0 150px; /* Tăng kích thước */
 }
 
 .logo {
-    max-height: 50px;
+    max-height: 60px; /* Logo to hơn */
     transition: transform 0.3s ease;
 }
 
@@ -34,8 +34,8 @@
 /* Search box styling */
 .search-box {
     flex: 1;
-    max-width: 400px;
-    margin: 0 30px;
+    max-width: 450px; /* Tăng kích thước */
+    margin: 0 40px; /* Tăng margin để các phần tử cách xa nhau hơn */
     position: relative;
 }
 
@@ -46,42 +46,44 @@
 
 .search-box input {
     width: 100%;
-    padding: 10px 15px;
+    padding: 12px 20px; /* Tăng padding để input to hơn */
     border: 1px solid #e0e0e0;
-    border-radius: 25px;
-    font-size: 14px;
+    border-radius: 30px; /* Bo tròn hơn */
+    font-size: 16px; /* Tăng kích thước font */
     transition: all 0.3s ease;
 }
 
 .search-box input:focus {
     border-color: #4a90e2;
-    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3); /* Tăng shadow khi focus */
     outline: none;
 }
 
 .search-button {
     position: absolute;
-    right: 10px;
+    right: 15px; /* Điều chỉnh vị trí */
     top: 50%;
     transform: translateY(-50%);
     background: none;
     border: none;
     color: #666;
     cursor: pointer;
-    padding: 5px;
+    padding: 8px; /* Tăng padding để nút to hơn */
+    font-size: 18px; /* Icon to hơn */
     z-index: 2;
 }
 
 .clear-search-button {
     position: absolute;
-    right: 40px;
+    right: 45px; /* Điều chỉnh vị trí */
     top: 50%;
     transform: translateY(-50%);
     background: none;
     border: none;
     color: #999;
     cursor: pointer;
-    padding: 5px;
+    padding: 8px; /* Tăng padding để nút to hơn */
+    font-size: 16px; /* Icon to hơn */
     z-index: 2;
 }
 
@@ -92,18 +94,18 @@
     left: 0;
     right: 0;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    max-height: 400px;
+    border-radius: 12px; /* Bo tròn hơn */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Shadow đậm hơn */
+    max-height: 450px; /* Cao hơn */
     overflow-y: auto;
     z-index: 1000;
-    margin-top: 5px;
+    margin-top: 10px; /* Tăng khoảng cách */
 }
 
 .search-result-item {
     display: flex;
     align-items: center;
-    padding: 10px 15px;
+    padding: 15px 20px; /* Tăng padding để items to hơn */
     border-bottom: 1px solid #f0f0f0;
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -114,11 +116,11 @@
 }
 
 .search-result-image {
-    width: 50px;
-    height: 50px;
+    width: 65px; /* Ảnh to hơn */
+    height: 65px; /* Ảnh to hơn */
     object-fit: cover;
-    border-radius: 4px;
-    margin-right: 15px;
+    border-radius: 6px; /* Bo tròn hơn */
+    margin-right: 20px; /* Tăng khoảng cách */
 }
 
 .search-result-info {
@@ -126,27 +128,28 @@
 }
 
 .search-result-info h4 {
-    margin: 0 0 5px;
-    font-size: 14px;
+    margin: 0 0 8px; /* Tăng margin */
+    font-size: 16px; /* Tăng font size */
     color: #333;
 }
 
 .search-result-price {
     margin: 0;
-    font-size: 14px;
+    font-size: 16px; /* Tăng font size */
     color: #4a90e2;
     font-weight: 600;
 }
 
 .see-all-results {
-    padding: 12px 15px;
+    padding: 15px 20px; /* Tăng padding */
     text-align: center;
     background-color: #f0f5ff;
     color: #4a90e2;
     font-weight: 500;
+    font-size: 16px; /* Tăng font size */
     cursor: pointer;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 12px; /* Bo tròn hơn */
+    border-bottom-right-radius: 12px; /* Bo tròn hơn */
     transition: background-color 0.2s ease;
 }
 
@@ -155,33 +158,34 @@
 }
 
 .no-results {
-    padding: 15px;
+    padding: 20px; /* Tăng padding */
     text-align: center;
     color: #999;
+    font-size: 16px; /* Tăng font size */
 }
 
 /* Navigation links */
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px; /* Tăng khoảng cách giữa các links */
 }
 
 .nav-link {
     color: #333;
     text-decoration: none;
-    font-size: 16px;
-    padding: 10px 5px;
+    font-size: 18px; /* Tăng font size */
+    padding: 12px 8px; /* Tăng padding */
     position: relative;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #4a90e2;
+    color: green;
 }
 
 .nav-link.active {
-    color: #4a90e2;
+    color: green;
     font-weight: 600;
 }
 
@@ -191,8 +195,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2px;
-    background-color: #4a90e2;
+    height: 3px; /* Tăng độ dày của gạch chân */
+    background-color: green;
 }
 
 .cart-link {
@@ -201,13 +205,13 @@
 
 .cart-count {
     position: absolute;
-    top: -5px;
-    right: -10px;
+    top: -8px; /* Điều chỉnh vị trí */
+    right: -12px; /* Điều chỉnh vị trí */
     background-color: #e74c3c;
     color: white;
-    font-size: 12px;
-    width: 18px;
-    height: 18px;
+    font-size: 14px; /* Tăng font size */
+    width: 22px; /* Tăng kích thước */
+    height: 22px; /* Tăng kích thước */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -219,26 +223,38 @@
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
-        padding: 10px;
+        padding: 15px; /* Tăng padding */
     }
     
     .logo-container {
-        margin-bottom: 10px;
+        margin-bottom: 15px; /* Tăng margin */
     }
     
     .search-box {
-        margin: 10px 0;
+        margin: 15px 0; /* Tăng margin */
         max-width: 100%;
     }
     
     .nav-links {
         width: 100%;
         justify-content: space-around;
-        padding: 10px 0;
-        gap: 10px;
+        padding: 15px 0; /* Tăng padding */
+        gap: 15px; /* Tăng gap */
     }
     
     .nav-text {
-        font-size: 14px;
+        font-size: 20px; /* Tăng font size */
+        text-align: center;
+    }
+}
+
+/* Thêm một khoảng cách lớn hơn cho các thiết bị lớn hơn */
+@media (min-width: 1200px) {
+    .header-content {
+        padding: 25px 40px; /* Tăng padding thêm cho màn hình lớn */
+    }
+    
+    .nav-links {
+        gap: 40px; /* Tăng khoảng cách giữa các liên kết */
     }
 }

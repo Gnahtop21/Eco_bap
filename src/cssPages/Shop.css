@@ -90,7 +90,7 @@
 }
 
 .filter-select:focus {
-  border-color: #4a90e2;
+  border-color: #27ae60;
   box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15);
   outline: none;
 }
@@ -212,7 +212,7 @@
 .product-price {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #e74c3c;
+  color: #2ecc71;
   margin-bottom: 18px;
 }
 
@@ -248,7 +248,7 @@
 }
 
 .buy-now-shop-btn:hover {
-  background-color: #c0392b;
+  background-color: #27ae60;
 }
 
 /* Modal thanh toán */
@@ -428,108 +428,6 @@
     flex-direction: column;
     gap: 8px;
   }
-}
-@keyframes flyToCart {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  20% {
-    transform: scale(1.1) translateY(-10px);
-  }
-  100% {
-    transform: scale(0.3);
-    opacity: 0.6;
-    left: var(--end-x);
-    top: var(--end-y);
-  }
+  
 }
 
-/* Thiết lập cho toast notification */
-.Toastify__toast-container {
-  z-index: 9999;
-}
-
-.Toastify__toast {
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.Toastify__toast--success {
-  background-color: #4caf50;
-}
-
-.Toastify__toast-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 12px;
-}
-
-/* Hiệu ứng nhấp nháy khi sản phẩm được thêm vào giỏ */
-@keyframes cartPulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.3);
-    color: #ff6b6b;
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Áp dụng hiệu ứng pulse cho icon giỏ hàng */
-.cart-icon.pulse,
-.fa-shopping-cart.pulse,
-.fa-cart-shopping.pulse {
-  animation: cartPulse 0.5s ease-in-out;
-  transform-origin: center;
-}
-
-/* Làm nổi bật nút thêm vào giỏ khi hover */
-.add-to-cart-shop-btn {
-  transition: all 0.2s ease-in-out;
-  position: relative;
-  overflow: hidden;
-}
-
-.add-to-cart-shop-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.add-to-cart-shop-btn:active {
-  transform: translateY(0);
-}
-
-/* Hiệu ứng gợn sóng khi nhấn nút thêm vào giỏ */
-.add-to-cart-shop-btn::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  transform: scale(0) translate(-50%, -50%);
-  transform-origin: top left;
-  opacity: 0;
-}
-
-.add-to-cart-shop-btn:active::after {
-  animation: ripple 0.6s ease-out;
-}
-
-@keyframes ripple {
-  0% {
-    transform: scale(0) translate(-50%, -50%);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(5) translate(-50%, -50%);
-    opacity: 0;
-  }
-}

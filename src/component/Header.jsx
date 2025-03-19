@@ -98,71 +98,7 @@ function Header({ products }) {
                     </NavLink>
                 </div>
 
-                <div className="search-box" ref={searchRef}>
-                    <form onSubmit={handleSearchSubmit}>
-                        <input
-                            type="text"
-                            placeholder="Search products..."
-                            value={searchTerm}
-                            onChange={handleSearchChange}
-                        />
-                        {searchTerm && (
-                            <button
-                                type="button"
-                                className="clear-search-button"
-                                onClick={clearSearch}
-                            >
-                                <FontAwesomeIcon icon={faTimes} />
-                            </button>
-                        )}
-                        <button type="submit" className="search-button">
-                            <FontAwesomeIcon icon={faSearch} />
-                        </button>
-                    </form>
 
-                    {showResults && searchResults.length > 0 && (
-                        <div className="search-results">
-                            {searchResults.slice(0, 5).map(product => (
-                                <div
-                                    key={product.id}
-                                    className="search-result-item"
-                                    onClick={() => handleProductClick(product.id)}
-                                >
-                                    {product.image && (
-                                        <img
-                                            src={product.image}
-                                            alt={product.name}
-                                            className="search-result-image"
-                                        />
-                                    )}
-                                    <div className="search-result-info">
-                                        <h4>{product.name}</h4>
-                                        <p className="search-result-price">
-                                            ${product.price.toFixed(2)}
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
-                            {searchResults.length > 5 && (
-                                <div
-                                    className="see-all-results"
-                                    onClick={() => {
-                                        navigate(`/shop?search=${encodeURIComponent(searchTerm)}`);
-                                        setShowResults(false);
-                                    }}
-                                >
-                                    See all {searchResults.length} results
-                                </div>
-                            )}
-                        </div>
-                    )}
-
-                    {showResults && searchResults.length === 0 && searchTerm && (
-                        <div className="search-results">
-                            <div className="no-results">No products found</div>
-                        </div>
-                    )}
-                </div>
 
                 <nav className="nav-links">
                     <NavLink
