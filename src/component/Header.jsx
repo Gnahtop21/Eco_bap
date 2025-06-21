@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import '../cssPages/Header.css'
-import logo from '../img/logo.png'
+import logo from '../img/logoBalabin.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faSearch, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { useCart } from '../contexts/CartContext';  // Sửa đường dẫn này nếu cần
@@ -106,39 +106,23 @@ function Header({ products }) {
                         className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
                         onClick={handleLinkClick}
                     >
-                        <span className="nav-text">Home</span>
+                        <span className="nav-text">Trang Chủ</span>
                     </NavLink>
                     <NavLink
                         to="/news"
                         className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
                         onClick={handleLinkClick}
                     >
-                        <span className="nav-text">News</span>
+                        <span className="nav-text">Tin Tức</span>
                     </NavLink>
                     <NavLink
                         to="/shop"
                         className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
                         onClick={handleLinkClick}
                     >
-                        <span className="nav-text">Shop</span>
+                        <span className="nav-text">Sản Phẩm</span>
                     </NavLink>
-                    <NavLink
-                        to="/contact"
-                        className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
-                        onClick={handleLinkClick}
-                    >
-                        <span className="nav-text">Contact</span>
-                    </NavLink>
-                    <NavLink
-                        to="/cart"
-                        className={({ isActive }) => isActive ? "nav-link active" : "nav-link cart-link"}
-                        onClick={handleLinkClick}
-                    >
-                        <span className="nav-text">
-                            Cart <FontAwesomeIcon icon={faShoppingCart} />
-                            {cartItemCount > 0 && <span className="cart-count">{cartItemCount}</span>}
-                        </span>
-                    </NavLink>
+
                 </nav>
             </div>
         </header>

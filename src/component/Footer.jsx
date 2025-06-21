@@ -2,7 +2,7 @@ import React from 'react'
 import '../cssPages/Footer.css'
 import { FaFacebook, FaInstagram, FaTiktok, FaMapMarkerAlt, FaEnvelope, FaPhone, FaClock } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import logo from '../img/logo.png'
+import logo from '../img/logoBalabin.png'
 
 function Footer() {
     const currentYear = new Date().getFullYear();
@@ -19,8 +19,8 @@ function Footer() {
         <footer className="footer" role="contentinfo" aria-label="Thông tin liên hệ và giới thiệu về Eco Bắp">
             <div className="footer-content">
                 <div className="footer-section about-section">
-                    <h2>Về Eco Bắp</h2>
-                    <p>Eco Bắp tự hào cung cấp các sản phẩm thân thiện với môi trường từ nguyên liệu bắp tự nhiên, chất lượng cao với giá cả hợp lý. Chúng tôi cam kết mang đến những giải pháp bền vững cho cuộc sống hàng ngày.</p>
+                    <h2>Về Balabin</h2>
+                    <p>Tiền thân là Eco Bắp chúng tôi tự hào cung cấp các sản phẩm thân thiện với môi trường từ nguyên liệu bắp tự nhiên, chất lượng cao với giá cả hợp lý. Chúng tôi cam kết mang đến những giải pháp bền vững cho cuộc sống hàng ngày.</p>
                     <div className="footer-logo">
                         <img src={logo} alt="logo" className='logo' width="120" height="60" />
                     </div>
@@ -31,15 +31,15 @@ function Footer() {
                     <ul className="contact-info">
                         <li>
                             <FaMapMarkerAlt aria-hidden="true" className="contact-icon" />
-                            <address>Đại_học_FPT, P.An Bình, Q.Ninh Kiều, TP. Cần Thơ</address>
+                            <address>Đại học FPT, P. An Bình, Q.Ninh Kiều, TP. Cần Thơ</address>
                         </li>
                         <li>
                             <FaPhone aria-hidden="true" className="contact-icon" />
-                            <a href="tel:+84964179329" aria-label="Số điện thoại">(84+).964.179.329</a>
+                            <a href="tel:+84964179329" aria-label="Số điện thoại">(84+) 964.179.329</a>
                         </li>
                         <li>
                             <FaEnvelope aria-hidden="true" className="contact-icon" />
-                            <a href="mailto:Ecobap954@gmail.com" aria-label="Địa chỉ email">Ecobap954@gmail.com</a>
+                            <a href="mailto:Ecobap954@gmail.com" aria-label="Địa chỉ email">balabin0905@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -49,7 +49,7 @@ function Footer() {
                     <ul className="operation-hours">
                         <li>
                             <FaClock aria-hidden="true" className="hours-icon" />
-                            <span>Giờ mở cửa: 8:00 - 22:00</span>
+                            <span>Giờ làm việc: 8:00 - 21:00</span>
                         </li>
                         <li>
                             <span className="day-span">Hoạt động: Thứ 2 - Chủ nhật</span>
@@ -67,7 +67,6 @@ function Footer() {
                             <li><Link to="/" onClick={scrollToTop}>Trang chủ</Link></li>
                             <li><Link to="/shop" onClick={scrollToTop}>Sản phẩm</Link></li>
                             <li><Link to="/news" onClick={scrollToTop}>Tin tức</Link></li>
-                            <li><Link to="/contact" onClick={scrollToTop}>Liên hệ</Link></li>
                         </ul>
                     </nav>
                 </div>

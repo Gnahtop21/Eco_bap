@@ -1,6 +1,7 @@
 /* Footer.css */
 .footer {
-    background-color: #318034; /* Màu xanh lá mới */
+    background-color: #318034;
+    /* Màu xanh lá mới */
     color: #e8f5e9;
     padding: 50px 20px 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,16 +23,19 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    margin-bottom: 0; /* Loại bỏ margin-bottom để đảm bảo khoảng cách đồng đều */
+    margin-bottom: 0;
+    /* Loại bỏ margin-bottom để đảm bảo khoảng cách đồng đều */
 }
 
 .footer h2 {
-    color: #ffffff; /* Màu trắng để tạo tương phản */
+    color: #ffffff;
+    /* Màu trắng để tạo tương phản */
     font-size: 1.4rem;
     margin-bottom: 20px;
     position: relative;
     padding-bottom: 10px;
-    flex-shrink: 0; /* Ngăn tiêu đề co lại */
+    flex-shrink: 0;
+    /* Ngăn tiêu đề co lại */
 }
 
 .footer h2::after {
@@ -41,20 +45,40 @@
     bottom: 0;
     width: 50px;
     height: 3px;
-    background-color: #E8F5E9; /* Màu đường gạch chân */
+    background-color: #E8F5E9;
+    /* Màu đường gạch chân */
 }
 
 .about-section p {
     line-height: 1.6;
     margin-bottom: 20px;
     text-align: justify;
-    flex-grow: 1; /* Cho phép nội dung mở rộng để lấp đầy không gian */
+    flex-grow: 1;
+    /* Cho phép nội dung mở rộng để lấp đầy không gian */
 }
 
 .footer-logo {
-    margin-top: auto; /* Đẩy logo xuống cuối phần */
-    padding-top: 15px;
+    margin-top: auto;
+    padding-top: 10px;
+    display: flex;
+    /* Đảm bảo logo được căn giữa */
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    /* Tạo đủ không gian chứa ảnh */
 }
+
+.footer-logo img {
+    width: auto;
+    height: auto;
+    max-height: 120px;
+    /* Hoặc 300px nếu bạn muốn to hơn */
+    max-width: 100%;
+    /* Giới hạn không vượt container */
+    object-fit: contain;
+    display: block;
+}
+
 
 /* Contact Section */
 .contact-info {
@@ -73,7 +97,8 @@
     margin-bottom: 15px;
 }
 
-.contact-icon, .hours-icon {
+.contact-icon,
+.hours-icon {
     margin-right: 10px;
     color: #E8F5E9;
     min-width: 20px;
@@ -214,14 +239,16 @@
 }
 
 /* Cập nhật phần phương thức thanh toán */
-.payment-methods, .certifications {
+.payment-methods,
+.certifications {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-bottom: 15px;
 }
 
-.payment-methods span, .certifications span {
+.payment-methods span,
+.certifications span {
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 5px;
@@ -260,23 +287,25 @@
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-    .footer-bottom, .footer-badges {
+
+    .footer-bottom,
+    .footer-badges {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
-    
+
     .legal-links {
         justify-content: center;
     }
-    
-    .payment-methods, .certifications {
+
+    .payment-methods,
+    .certifications {
         justify-content: center;
         align-items: center;
         margin-bottom: 10px;
     }
-    
+
     .payment-logos {
         justify-content: center;
     }
@@ -286,7 +315,7 @@
     .footer-content {
         grid-template-columns: 1fr;
     }
-    
+
     .footer-section {
         padding: 15px;
     }

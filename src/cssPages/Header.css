@@ -10,20 +10,23 @@
 }
 
 .header-content {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 20px 30px; /* Tăng padding để tạo không gian rộng hơn */
+    padding: 10px 10px;
+    /* Tăng padding để tạo không gian rộng hơn */
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo-container {
-    flex: 0 0 150px; /* Tăng kích thước */
+    flex: 0 0 150px;
+    /* Tăng kích thước */
 }
 
 .logo {
-    max-height: 60px; /* Logo to hơn */
+    max-height: 100px;
+    /* Logo to hơn */
     transition: transform 0.3s ease;
 }
 
@@ -34,8 +37,10 @@
 /* Search box styling */
 .search-box {
     flex: 1;
-    max-width: 450px; /* Tăng kích thước */
-    margin: 0 40px; /* Tăng margin để các phần tử cách xa nhau hơn */
+    max-width: 450px;
+    /* Tăng kích thước */
+    margin: 0 40px;
+    /* Tăng margin để các phần tử cách xa nhau hơn */
     position: relative;
 }
 
@@ -46,44 +51,54 @@
 
 .search-box input {
     width: 100%;
-    padding: 12px 20px; /* Tăng padding để input to hơn */
+    padding: 12px 20px;
+    /* Tăng padding để input to hơn */
     border: 1px solid #e0e0e0;
-    border-radius: 30px; /* Bo tròn hơn */
-    font-size: 16px; /* Tăng kích thước font */
+    border-radius: 30px;
+    /* Bo tròn hơn */
+    font-size: 16px;
+    /* Tăng kích thước font */
     transition: all 0.3s ease;
 }
 
 .search-box input:focus {
     border-color: #4a90e2;
-    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3); /* Tăng shadow khi focus */
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+    /* Tăng shadow khi focus */
     outline: none;
 }
 
 .search-button {
     position: absolute;
-    right: 15px; /* Điều chỉnh vị trí */
+    right: 15px;
+    /* Điều chỉnh vị trí */
     top: 50%;
     transform: translateY(-50%);
     background: none;
     border: none;
     color: #666;
     cursor: pointer;
-    padding: 8px; /* Tăng padding để nút to hơn */
-    font-size: 18px; /* Icon to hơn */
+    padding: 8px;
+    /* Tăng padding để nút to hơn */
+    font-size: 18px;
+    /* Icon to hơn */
     z-index: 2;
 }
 
 .clear-search-button {
     position: absolute;
-    right: 45px; /* Điều chỉnh vị trí */
+    right: 45px;
+    /* Điều chỉnh vị trí */
     top: 50%;
     transform: translateY(-50%);
     background: none;
     border: none;
     color: #999;
     cursor: pointer;
-    padding: 8px; /* Tăng padding để nút to hơn */
-    font-size: 16px; /* Icon to hơn */
+    padding: 8px;
+    /* Tăng padding để nút to hơn */
+    font-size: 16px;
+    /* Icon to hơn */
     z-index: 2;
 }
 
@@ -94,18 +109,23 @@
     left: 0;
     right: 0;
     background-color: #fff;
-    border-radius: 12px; /* Bo tròn hơn */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Shadow đậm hơn */
-    max-height: 450px; /* Cao hơn */
+    border-radius: 12px;
+    /* Bo tròn hơn */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    /* Shadow đậm hơn */
+    max-height: 450px;
+    /* Cao hơn */
     overflow-y: auto;
     z-index: 1000;
-    margin-top: 10px; /* Tăng khoảng cách */
+    margin-top: 10px;
+    /* Tăng khoảng cách */
 }
 
 .search-result-item {
     display: flex;
     align-items: center;
-    padding: 15px 20px; /* Tăng padding để items to hơn */
+    padding: 15px 20px;
+    /* Tăng padding để items to hơn */
     border-bottom: 1px solid #f0f0f0;
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -116,11 +136,15 @@
 }
 
 .search-result-image {
-    width: 65px; /* Ảnh to hơn */
-    height: 65px; /* Ảnh to hơn */
+    width: 65px;
+    /* Ảnh to hơn */
+    height: 65px;
+    /* Ảnh to hơn */
     object-fit: cover;
-    border-radius: 6px; /* Bo tròn hơn */
-    margin-right: 20px; /* Tăng khoảng cách */
+    border-radius: 6px;
+    /* Bo tròn hơn */
+    margin-right: 20px;
+    /* Tăng khoảng cách */
 }
 
 .search-result-info {
@@ -128,28 +152,35 @@
 }
 
 .search-result-info h4 {
-    margin: 0 0 8px; /* Tăng margin */
-    font-size: 16px; /* Tăng font size */
+    margin: 0 0 8px;
+    /* Tăng margin */
+    font-size: 16px;
+    /* Tăng font size */
     color: #333;
 }
 
 .search-result-price {
     margin: 0;
-    font-size: 16px; /* Tăng font size */
+    font-size: 16px;
+    /* Tăng font size */
     color: #4a90e2;
     font-weight: 600;
 }
 
 .see-all-results {
-    padding: 15px 20px; /* Tăng padding */
+    padding: 15px 20px;
+    /* Tăng padding */
     text-align: center;
     background-color: #f0f5ff;
     color: #4a90e2;
     font-weight: 500;
-    font-size: 16px; /* Tăng font size */
+    font-size: 16px;
+    /* Tăng font size */
     cursor: pointer;
-    border-bottom-left-radius: 12px; /* Bo tròn hơn */
-    border-bottom-right-radius: 12px; /* Bo tròn hơn */
+    border-bottom-left-radius: 12px;
+    /* Bo tròn hơn */
+    border-bottom-right-radius: 12px;
+    /* Bo tròn hơn */
     transition: background-color 0.2s ease;
 }
 
@@ -158,24 +189,29 @@
 }
 
 .no-results {
-    padding: 20px; /* Tăng padding */
+    padding: 20px;
+    /* Tăng padding */
     text-align: center;
     color: #999;
-    font-size: 16px; /* Tăng font size */
+    font-size: 16px;
+    /* Tăng font size */
 }
 
 /* Navigation links */
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 30px; /* Tăng khoảng cách giữa các links */
+    gap: 30px;
+    /* Tăng khoảng cách giữa các links */
 }
 
 .nav-link {
     color: #333;
     text-decoration: none;
-    font-size: 18px; /* Tăng font size */
-    padding: 12px 8px; /* Tăng padding */
+    font-size: 18px;
+    /* Tăng font size */
+    padding: 12px 8px;
+    /* Tăng padding */
     position: relative;
     transition: color 0.3s ease;
 }
@@ -195,7 +231,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 3px; /* Tăng độ dày của gạch chân */
+    height: 3px;
+    /* Tăng độ dày của gạch chân */
     background-color: green;
 }
 
@@ -205,13 +242,18 @@
 
 .cart-count {
     position: absolute;
-    top: -8px; /* Điều chỉnh vị trí */
-    right: -12px; /* Điều chỉnh vị trí */
+    top: -8px;
+    /* Điều chỉnh vị trí */
+    right: -12px;
+    /* Điều chỉnh vị trí */
     background-color: #e74c3c;
     color: white;
-    font-size: 14px; /* Tăng font size */
-    width: 22px; /* Tăng kích thước */
-    height: 22px; /* Tăng kích thước */
+    font-size: 14px;
+    /* Tăng font size */
+    width: 22px;
+    /* Tăng kích thước */
+    height: 22px;
+    /* Tăng kích thước */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -223,27 +265,33 @@
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
-        padding: 15px; /* Tăng padding */
+        padding: 15px;
+        /* Tăng padding */
     }
-    
+
     .logo-container {
-        margin-bottom: 15px; /* Tăng margin */
+        margin-bottom: 15px;
+        /* Tăng margin */
     }
-    
+
     .search-box {
-        margin: 15px 0; /* Tăng margin */
+        margin: 15px 0;
+        /* Tăng margin */
         max-width: 100%;
     }
-    
+
     .nav-links {
         width: 100%;
         justify-content: space-around;
-        padding: 15px 0; /* Tăng padding */
-        gap: 15px; /* Tăng gap */
+        padding: 15px 0;
+        /* Tăng padding */
+        gap: 15px;
+        /* Tăng gap */
     }
-    
+
     .nav-text {
-        font-size: 20px; /* Tăng font size */
+        font-size: 20px;
+        /* Tăng font size */
         text-align: center;
     }
 }
@@ -251,10 +299,12 @@
 /* Thêm một khoảng cách lớn hơn cho các thiết bị lớn hơn */
 @media (min-width: 1200px) {
     .header-content {
-        padding: 25px 40px; /* Tăng padding thêm cho màn hình lớn */
+        padding: 25px 40px;
+        /* Tăng padding thêm cho màn hình lớn */
     }
-    
+
     .nav-links {
-        gap: 40px; /* Tăng khoảng cách giữa các liên kết */
+        gap: 40px;
+        /* Tăng khoảng cách giữa các liên kết */
     }
 }

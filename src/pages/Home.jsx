@@ -11,8 +11,12 @@ import img6 from "../img/gianhang.jpg";
 import img7 from "../img/gianhangtetjpg.jpg";
 import img8 from "../img/XuanSacTayDo.jpg";
 import img9 from "../img/wsSocTrang.jpg";
+import img10 from "../img/gianhangarthouse.jpg";
+import img11 from "../img/lamGiay.jpg";
 import fpt from "../img/fpt.jpg";
 import ecoka from "../img/ecoka.jpg";
+import artHouse from "../img/artHouse.png";
+import nhaCoBinhThuy from "../img/nhaCoBinhThuy.jpg";
 import members from "../img/members.jpg";
 
 import "../cssPages/Home.css";
@@ -37,10 +41,11 @@ function CustomCarousel() {
     >
       <Carousel.Item>
         <div className="carousel-image-container">
-          <img src={img4} alt="First slide" />
+          <img src={nhaCoBinhThuy} alt="First slide" />
           <div className="carousel-overlay">
-            <h2>Khám phá sự đổi mới</h2>
-            <p>Khám phá các sản phẩm thủ công  tuyệt vời của chúng tôi</p>
+            <h2>Xu Hướng Tiêu Dùng Xanh</h2>
+            <p>Từ nguyên liệu tự nhiên đến đôi tay khéo léo – sản phẩm của chúng tôi là lựa chọn cho tương lai.</p>
+
             <button className="carousel-btn" onClick={scrollToProducts}>
               Xem thêm
             </button>
@@ -52,24 +57,24 @@ function CustomCarousel() {
         <div className="carousel-image-container">
           <img src={img9} alt="Second slide" />
           <div className="carousel-overlay">
-            <h2>Đội ngũ chuyên gia</h2>
+            <h2>Đội Ngũ Chuyên Nghiệp</h2>
             <p>Làm việc với đội ngũ chuyên nghiệp và tận tâm của chúng tôi</p>
             <button
               className="carousel-btn"
               onClick={() => (window.location.href = "/shop")}
             >
-              Cửa Hàng
-            </button>
+              Sản Phẩm            </button>
           </div>
         </div>
       </Carousel.Item>
 
       <Carousel.Item>
         <div className="carousel-image-container">
-          <img src={img1} alt="Third slide" />
+          <img src={img10} alt="Third slide" />
           <div className="carousel-overlay">
-            <h2>Sản phẩm chất lượng</h2>
-            <p>Cam kết những sản phẩm làm hài lòng khách hàng</p>
+            <h2>Sản Phẩm Thân Thiện Với Môi Trường</h2>
+            <p>Chúng tôi mang đến những sản phẩm xanh, an toàn và đáp ứng sự hài lòng của bạn.</p>
+
             <button
               className="carousel-btn"
               onClick={() => (window.location.href = "/contact")}
@@ -87,45 +92,57 @@ function Home() {
   const product = products;
   const [visibleProducts, setVisibleProducts] = React.useState(4);
   const [currentEventIndex, setCurrentEventIndex] = useState(0);
-  const { addToCart } = useCart();
 
   const events = [
     {
-      image: img6,
-      title: "Kết Nối Gian Hàng",
+      image: img11,
+      title: "Nhóm ra mắt giấy từ vỏ bắp",
       description:
-        "Nơi các sản phẩm độc đáo được trưng bày và giới thiệu, kết nối khách hàng với những giá trị tinh tế và bền vững.",
+        "Giấy thủ công làm từ vỏ bắp với bề mặt mộc mạc, giữ nguyên nét thô tự nhiên, thân thiện với môi trường – thích hợp để viết tay, vẽ tranh hoặc làm quà tặng nghệ thuật."
     },
     {
-      image: img7,
-      title: "Gian Hàng Tết",
+      image: img10,
+      title: "Gian Hàng Tại Nhà Cổ Bình Thủy",
       description:
-        "Mang đến sự hòa quyện giữa giá trị văn hóa Tết truyền thống và sáng tạo xanh, với những sản phẩm thân thiện môi trường, đậm nét độc đáo.",
-    },
-    {
-      image: img4,
-      title: "Workshop Kết Nối Nghệ Nhân",
-      description:
-        "Quy trình để tạo nên sản phẩm xanh, kết nối trực tiếp với những người thợ lành nghề giàu kinh nghiệm.",
-    },
-    {
-      image: img8,
-      title: "Xuân Sắc Tây Đô",
-      description:
-        "Sự kiện giao lưu và tri ân các nhà giáo Đại học FPT, tôn vinh một năm cống hiến cho tri thức.",
+        "Tọa lạc trong không gian di sản Nhà Cổ Bình Thủy, gian hàng là nơi tôn vinh giá trị truyền thống qua những sản phẩm thủ công xanh và bền vững."
     },
     {
       image: img9,
       title: "Nghề Truyền Thống Giá Trị Mới",
       description:
-        "Workshop tuyên truyền và nâng cao nhận thức cho bà con tại ấp Hòa Thọ tỉnh Sóc Trăng.",
+        "Workshop tuyên truyền và nâng cao nhận thức cho bà con tại ấp Hòa Thọ tỉnh Sóc Trăng."
+    },
+    {
+      image: img8,
+      title: "Xuân Sắc Tây Đô",
+      description:
+        "Sự kiện giao lưu và tri ân các nhà giáo Đại học FPT, tôn vinh một năm cống hiến cho tri thức."
+    },
+    {
+      image: img7,
+      title: "Gian Hàng Tết",
+      description:
+        "Mang đến sự hòa quyện giữa giá trị văn hóa Tết truyền thống và sáng tạo xanh, với những sản phẩm thân thiện môi trường, đậm nét độc đáo."
+    },
+    {
+      image: img6,
+      title: "Kết Nối Gian Hàng",
+      description:
+        "Nơi các sản phẩm độc đáo được trưng bày và giới thiệu, kết nối khách hàng với những giá trị tinh tế và bền vững."
+    },
+    {
+      image: img4,
+      title: "Workshop Kết Nối Nghệ Nhân",
+      description:
+        "Quy trình để tạo nên sản phẩm xanh, kết nối trực tiếp với những người thợ lành nghề giàu kinh nghiệm."
     },
     {
       image: img1,
-      title: "Nghề Truyền Thống Giá Trị Mới",
-      description: "Workhop nâng cao nhận thức tại Đại Học FPT",
-    },
+      title: "Workshop Nghề Truyền Thống Giá Trị Mới",
+      description: "Workhop nâng cao nhận thức tại Đại Học FPT"
+    }
   ];
+
 
   const handlePrevEvent = () => {
     setCurrentEventIndex((prev) => {
@@ -152,49 +169,48 @@ function Home() {
 
       <div className="tag-list">
         <div className="inner">
-          <div className="tag"> Chào </div>
-          <div className="tag"> Mừng</div>
-          <div className="tag"> Đến</div>
-          <div className="tag"> Với</div>
-          <div className="tag"> Đại</div>
-          <div className="tag"> Gia</div>
-          <div className="tag"> Đình</div>
-          <div className="tag"> Bắp!</div>
+          <div className="tag"> Welcome </div>
+          <div className="tag"> To</div>
+          <div className="tag"> Balabin</div>
           <div className="tag"> </div>
-          <div className="tag"> Chào </div>
-          <div className="tag"> Mừng</div>
-          <div className="tag"> Đến</div>
-          <div className="tag"> Với</div>
-          <div className="tag"> Đại</div>
-          <div className="tag"> Gia</div>
-          <div className="tag"> Đình</div>
-          <div className="tag"> Bắp!</div>
+          <div className="tag"> Welcome </div>
+          <div className="tag"> To</div>
+          <div className="tag"> Balabin</div>
+
+          <div className="tag"> </div>
+          <div className="tag"> Welcome </div>
+          <div className="tag"> To</div>
+          <div className="tag"> Balabin</div>
+
+          <div className="tag"> </div>
+          <div className="tag"> Welcome </div>
+          <div className="tag"> To</div>
+          <div className="tag"> Balabin</div>
+
+
         </div>
         <div className="fade"> </div>
       </div>
       <div className="home-hero">
         <div className="hero-image">
-          <img src={members} alt="Hero" />
+          <img src={nhaCoBinhThuy} alt="Hero" />
         </div>
         <div className="hero-content">
-          <h1>Chào Mừng Đến Với Đại Gia Đình Bắp</h1>
+          <h1>Chào Mừng Đến Với Đại Gia Đình Balabin</h1>
           <p>Cùng khám phá những sản phẩm tuyệt vời nào ^^</p>
           <button
             className="hero-btn"
             onClick={() => (window.location.href = "/shop")}
           >
-            Shopping Now
+            Xem ngay
           </button>
         </div>
       </div>
 
-
-
-
       <div className="product-section">
         <h2>Sản Phẩm Nổi Bật</h2>
         <div className="product-grid">
-          {products.slice(0, visibleProducts).map((product) => (
+          {products.slice(0, 4).map((product) => (
             <div className="product-card" key={product.id}>
               <img src={product.image} alt={product.name} />
               <div className="product-content">
@@ -203,30 +219,18 @@ function Home() {
                   {product.price.toLocaleString()} VNĐ
                 </div>
               </div>
-              <button
-                className="add-to-cart-home-btn"
-                onClick={() => addToCart(product)}
-              >
-                Thêm Vào Giỏ Hàng
-              </button>
             </div>
           ))}
         </div>
-        {visibleProducts < products.length && (
-          <div className="load-more-container">
-            <button className="load-more-btn" onClick={handleLoadMore}>
-              Xem Thêm
-            </button>
-          </div>
-        )}
       </div>
+
 
       <div className="activities-section">
         <h2>Tầm Nhìn Và Sứ Mệnh</h2>
         <div className="activities-container">
           <div className="activity-item">
             <div className="activity-image">
-              <img src={img1} alt="Hoạt động 1" />
+              <img src={img10} alt="Hoạt động 1" />
             </div>
             <div className="activity-content">
               <h3>Sản xuất vật liệu bền vững thân thiện môi trường</h3>
@@ -277,17 +281,17 @@ function Home() {
       <div className="events-section">
         <h2>Sự Kiện và Workshop</h2>
         <div className="events-carousel">
-          <button className="carousel-nav prev" onClick={handlePrevEvent}>
+          <button
+            className="carousel-nav prev"
+            onClick={() =>
+              document.querySelector(".events-grid-wrapper").scrollBy({ left: -300, behavior: "smooth" })
+            }
+          >
             ❮
           </button>
+
           <div className="events-grid-wrapper">
-            <div
-              className="events-grid"
-              style={{
-                transform: `translateX(-${(currentEventIndex * 100) / 4}%)`,
-                transition: "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
-              }}
-            >
+            <div className="events-grid">
               {events.map((event, index) => (
                 <div className="event-card" key={index}>
                   <div className="event-image">
@@ -301,18 +305,34 @@ function Home() {
               ))}
             </div>
           </div>
-          <button className="carousel-nav next" onClick={handleNextEvent}>
+
+          <button
+            className="carousel-nav next"
+            onClick={() =>
+              document.querySelector(".events-grid-wrapper").scrollBy({ left: 300, behavior: "smooth" })
+            }
+          >
             ❯
           </button>
         </div>
       </div>
 
+
       <div className="partners-section">
-        <h2>Đối Tác Chính</h2>
+        <h2>Các Đối Tác </h2>
         <div className="partners-grid">
           <div className="partner-card">
             <div className="partner-logo">
-              <img src={ecoka} alt="Đối tác 1" />
+              <img src={fpt} alt="Đối tác 1" />
+            </div>
+            <h3>Trường Đại Học FPT</h3>
+            <p>
+              Đồng hành cùng dự án, mang đến nguồn lực vững chắc và tạo nền tảng phát triển bền vững cho những ý tưởng sáng tạo.
+            </p>
+          </div>
+          <div className="partner-card">
+            <div className="partner-logo">
+              <img src={ecoka} alt="Đối tác 2" />
             </div>
             <h3>Công ty cổ phần Ecoka</h3>
             <p>
@@ -322,13 +342,12 @@ function Home() {
 
           <div className="partner-card">
             <div className="partner-logo">
-              <img src={fpt} alt="Đối tác 3" />
+              <img src={artHouse} alt="Đối tác 3" />
             </div>
-            <h3>Trường Đại Học FPT</h3>
+            <h3>Art House</h3>
             <p>
-              Đồng hành cùng dự án, mang đến nguồn lực vững chắc và tạo nền tảng phát triển bền vững cho những ý tưởng sáng tạo.
-            </p>
-          </div>
+              Đối tác đồng hành trong lĩnh vực mỹ thuật ứng dụng và kênh phân phối sản phẩm sáng tạo.
+            </p>          </div>
         </div>
       </div>
     </div>

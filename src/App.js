@@ -7,9 +7,7 @@ import Header from "./component/Header";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import ProductDetail from "./pages/ProductDetail";
-import Cart from "./pages/Cart";
 import News from "./pages/News";
-import Contact from "./pages/Contact";
 import Footer from "./component/Footer";
 // Import các component khác nếu cần
 
@@ -37,9 +35,7 @@ function App() {
           <Route path="/" element={<Home products={products} />} />
           <Route path="/shop" element={<Shop products={products} />} />
           <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/cart" element={<Cart />} />
           <Route path="/news" element={<News />} />
-          <Route path="/contact" element={<Contact />} />
           {/* Thêm các route khác nếu cần */}
         </Routes>
         <Footer />
